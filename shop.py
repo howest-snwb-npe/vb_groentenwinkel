@@ -2,7 +2,10 @@
 
 asperges = 69
 
-aantal = int(input("Hoeveel asperges wenst u? "))
+gevraagd_aantal = int(input("Hoeveel asperges wenst u? "))
 
-asperges = asperges - aantal
-print("🥬" * aantal)
+if gevraagd_aantal > asperges:
+    print(f"Ik heb maar {asperges} in voorraad.")
+else:
+    asperges = asperges - gevraagd_aantal
+    print("🥬" * gevraagd_aantal)
