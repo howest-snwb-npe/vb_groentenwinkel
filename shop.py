@@ -7,7 +7,10 @@ while voorraad["asperges"] > 0 or voorraad["pompoenen"] > 0:
         print(f"{groente:12} aantal: {voorraad[groente]}")
 
     # we vragen wat de klant wenst
-    gevraagde_groente = input("Welke groente wenst u? ")
+    while True:
+        gevraagde_groente = input("Welke groente wenst u? ")
+        if gevraagde_groente in voorraad.keys():
+            break
 
     # we vragen de hoeveelheid
     gevraagd_aantal = int(input(f"Hoeveel wenst u van {gevraagde_groente}? "))
