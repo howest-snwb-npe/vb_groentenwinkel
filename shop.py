@@ -2,6 +2,10 @@
 voorraad = { "asperges" : 69, "pompoenen" : 23}
 
 while voorraad["asperges"] > 0 or voorraad["pompoenen"] > 0:
+    # geef lijstje van voorraad
+    for groente in voorraad:
+        print(f"{groente:12} aantal: {voorraad[groente]}")
+
     # we vragen wat de klant wenst
     gevraagde_groente = input("Welke groente wenst u? ")
 
